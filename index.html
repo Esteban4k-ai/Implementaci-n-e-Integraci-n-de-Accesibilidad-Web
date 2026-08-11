@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Budgeta - Controlá tus gastos</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Enlace para saltar directamente al contenido principal -->
+    <a href="#main-content" class="skip-link">
+        Saltar al contenido principal
+    </a>
+
+    <header>
+        <nav aria-label="Navegación principal">
+
+            <a href="#inicio">Budgeta</a>
+
+            <button
+                type="button"
+                aria-expanded="false"
+                aria-controls="menu-principal">
+                Menú
+            </button>
+
+            <ul id="menu-principal">
+                <li>
+                    <a href="#inicio">Inicio</a>
+                </li>
+
+                <li>
+                    <a href="#caracteristicas">Características</a>
+                </li>
+
+                <li>
+                    <a href="#seguridad">Seguridad</a>
+                </li>
+
+                <li>
+                    <a href="#contacto">Contacto</a>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <main id="main-content">
+
+        <section id="inicio">
+            <h1>Controlá tus gastos. Organizá tu futuro.</h1>
+
+            <p>
+                Budgeta te ayuda a organizar tus gastos,
+                establecer presupuestos y comprender mejor
+                tus hábitos financieros.
+            </p>
+
+            <a href="#contacto">Empezar ahora</a>
+        </section>
+
+
+        <section id="caracteristicas">
+
+            <h2>Todo lo que necesitás para organizar tus finanzas</h2>
+
+            <article>
+                <h3>Seguimiento de gastos</h3>
+
+                <p>
+                    Registrá y organizá tus gastos para saber
+                    en qué utilizás tu dinero.
+                </p>
+            </article>
+
+            <article>
+                <h3>Presupuestos</h3>
+
+                <p>
+                    Establecé límites para tus gastos y
+                    mantené tus objetivos bajo control.
+                </p>
+            </article>
+
+            <article>
+                <h3>Estadísticas</h3>
+
+                <p>
+                    Comprendé tus hábitos financieros mediante
+                    información clara y sencilla.
+                </p>
+            </article>
+
+        </section>
+
+
+        <section id="seguridad">
+
+            <h2>Tu información, protegida</h2>
+
+            <p>
+                Budgeta está pensado para que puedas organizar
+                tu información financiera de manera clara y segura.
+            </p>
+
+        </section>
+
+
+        <section id="contacto">
+
+            <h2>Contactate con nosotros</h2>
+
+            <form>
+
+                <div>
+                    <label for="nombre">Nombre</label>
+
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        required>
+                </div>
+
+
+                <div>
+                    <label for="email">Correo electrónico</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        aria-describedby="email-error">
+
+                    <p id="email-error" role="alert"></p>
+                </div>
+
+
+                <div>
+                    <label for="mensaje">Mensaje</label>
+
+                    <textarea
+                        id="mensaje"
+                        name="mensaje"
+                        required></textarea>
+                </div>
+
+
+                <button type="submit">
+                    Enviar mensaje
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>&copy; 2026 Budgeta. Todos los derechos reservados.</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

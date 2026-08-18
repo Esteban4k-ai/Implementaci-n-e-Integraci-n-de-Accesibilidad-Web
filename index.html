@@ -1,175 +1,205 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Budgeta - Controlá tus gastos</title>
-
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Budgeta — Controlá tus gastos, organizá tu futuro</title>
+<meta name="description" content="Budgeta es la app que te ayuda a organizar tus gastos, definir presupuestos y entender tus hábitos financieros. Construida con accesibilidad real: teclado, lectores de pantalla y contraste AA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-    <!-- Enlace para saltar directamente al contenido principal -->
-    <a href="#main-content" class="skip-link">
-        Saltar al contenido principal
-    </a>
+<a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 
-    <header>
-        <nav aria-label="Navegación principal">
+<header>
+  <div class="toolbar">
+    <div class="wrap">
+      <span class="lbl">Accesibilidad:</span>
+      <button type="button" id="btn-texto" class="a11y-btn" aria-pressed="false">A+ Texto</button>
+      <button type="button" id="btn-contraste" class="a11y-btn" aria-pressed="false">Alto contraste</button>
+    </div>
+  </div>
+  <nav class="principal wrap" aria-label="Navegación principal">
+    <a href="#inicio" class="brand">Budgeta<span class="dot">.</span></a>
+    <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="menu-principal" id="btn-menu">
+      Menú
+    </button>
+    <ul id="menu-principal">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#caracteristicas">Características</a></li>
+      <li><a href="#accesibilidad">Accesibilidad</a></li>
+      <li><a href="#seguridad">Seguridad</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
 
-            <a href="#inicio">Budgeta</a>
+<main id="main-content">
 
-            <button
-                type="button"
-                aria-expanded="false"
-                aria-controls="menu-principal">
-                Menú
-            </button>
+  <section id="inicio">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <span class="eyebrow">Finanzas personales, sin vueltas</span>
+          <h1>Controlá tus gastos.<br>Organizá tu futuro.</h1>
+          <p class="lead">Budgeta te ayuda a registrar tus gastos, establecer presupuestos y entender mejor tus hábitos financieros — con una interfaz pensada para que cualquier persona pueda usarla, sin importar cómo navegue la web.</p>
+          <div class="cta-row">
+            <a href="#contacto" class="btn btn-primary">Empezar ahora</a>
+            <a href="#accesibilidad" class="btn btn-ghost">Ver cómo pensamos la accesibilidad</a>
+          </div>
+        </div>
 
-            <ul id="menu-principal">
-                <li>
-                    <a href="#inicio">Inicio</a>
-                </li>
+        <div class="ledger-card" aria-label="Ejemplo de resumen mensual en Budgeta">
+          <div class="ledger-card__head">
+            <span>Resumen · Agosto</span>
+            <span>2026</span>
+          </div>
+          <div class="ledger-card__balance">
+            <span class="label">Disponible este mes</span>
+            <span class="amount num" id="balance-demo">$ 0</span>
+          </div>
+          <div class="ledger-rows">
+            <div class="ledger-row">
+              <span class="desc">Alquiler<span class="cat">Vivienda</span></span>
+              <span class="amt neg num">− $180.000</span>
+            </div>
+            <div class="ledger-row">
+              <span class="desc">Supermercado<span class="cat">Comida</span></span>
+              <span class="amt neg num">− $64.500</span>
+            </div>
+            <div class="ledger-row">
+              <span class="desc">Sueldo<span class="cat">Ingreso</span></span>
+              <span class="amt pos num">+ $410.000</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-                <li>
-                    <a href="#caracteristicas">Características</a>
-                </li>
+  <section id="caracteristicas" class="ledger">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Características</span>
+        <h2>Todo lo que necesitás para organizar tus finanzas</h2>
+        <p>Tres herramientas simples que trabajan juntas para que sepas, en todo momento, en qué se te va la plata.</p>
+      </div>
 
-                <li>
-                    <a href="#seguridad">Seguridad</a>
-                </li>
+      <div class="feature-list">
+        <article>
+          <svg class="icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 17l5-5 4 4 8-8"/><path d="M15 8h5v5"/></svg>
+          <h3>Seguimiento de gastos</h3>
+          <p>Registrá y organizá tus gastos para saber con claridad en qué utilizás tu dinero cada mes.</p>
+        </article>
+        <article>
+          <svg class="icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M3 10h18M8 15h4"/></svg>
+          <h3>Presupuestos</h3>
+          <p>Establecé límites para tus gastos por categoría y mantené tus objetivos bajo control.</p>
+        </article>
+        <article>
+          <svg class="icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 20V10M12 20V4M20 20v-7"/></svg>
+          <h3>Estadísticas</h3>
+          <p>Comprendé tus hábitos financieros mediante información clara, simple y fácil de leer.</p>
+        </article>
+      </div>
+    </div>
+  </section>
 
-                <li>
-                    <a href="#contacto">Contacto</a>
-                </li>
-            </ul>
+  <section id="accesibilidad" class="ledger">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Accesibilidad</span>
+        <h2>Construida para que la use cualquier persona</h2>
+        <p>Este proyecto nació como un ejercicio de implementación e integración de accesibilidad web: cada decisión de diseño se probó también sin mouse, sin ver la pantalla y con el zoom al 200%.</p>
+      </div>
 
-        </nav>
-    </header>
+      <div class="a11y-grid">
+        <div class="a11y-card">
+          <span class="check">✓ Navegación</span>
+          <h3>100% operable por teclado</h3>
+          <p>Todo enlace, botón y campo del formulario se alcanza y se activa con Tab, Enter y Espacio, con un orden de foco lógico.</p>
+        </div>
+        <div class="a11y-card">
+          <span class="check">✓ Lectores de pantalla</span>
+          <h3>Marcado semántico y ARIA donde hace falta</h3>
+          <p>Encabezados jerárquicos, landmarks y atributos como <span class="num">aria-expanded</span> y <span class="num">aria-describedby</span> anuncian el estado real de la interfaz.</p>
+        </div>
+        <div class="a11y-card">
+          <span class="check">✓ Contraste</span>
+          <h3>Cumple WCAG 2.1 nivel AA</h3>
+          <p>Todos los pares de texto y fondo superan una relación de contraste 4.5:1, y hay un modo de alto contraste opcional.</p>
+        </div>
+        <div class="a11y-card">
+          <span class="check">✓ Legibilidad</span>
+          <h3>Texto redimensionable</h3>
+          <p>El tamaño de fuente puede ampliarse sin romper el diseño ni ocultar contenido, tanto por el navegador como por el botón "A+ Texto".</p>
+        </div>
+      </div>
 
-    <main id="main-content">
+      <p class="a11y-tools"><strong>Validado con:</strong> axe DevTools, Lighthouse, navegación solo con teclado, y pruebas manuales con NVDA y VoiceOver.</p>
+    </div>
+  </section>
 
-        <section id="inicio">
-            <h1>Controlá tus gastos. Organizá tu futuro.</h1>
+  <section id="seguridad" class="ledger">
+    <div class="wrap">
+      <div class="section-head" style="margin-bottom:0;">
+        <span class="eyebrow">Seguridad</span>
+        <h2>Tu información, protegida</h2>
+      </div>
+      <div class="seguridad-grid">
+        <p>Budgeta está pensado para que puedas organizar tu información financiera de manera clara y segura, sin depender de configuraciones complicadas ni letra chica.</p>
+        <ul class="seguridad-list">
+          <li><span class="marca num">01</span> Tus datos se guardan cifrados y nunca se comparten con terceros.</li>
+          <li><span class="marca num">02</span> Podés exportar o borrar tu información cuando quieras.</li>
+          <li><span class="marca num">03</span> El acceso a tu cuenta queda registrado y es visible para vos.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-            <p>
-                Budgeta te ayuda a organizar tus gastos,
-                establecer presupuestos y comprender mejor
-                tus hábitos financieros.
-            </p>
+  <section id="contacto" class="ledger">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Contacto</span>
+        <h2>Contactate con nosotros</h2>
+        <p>¿Tenés dudas, sugerencias o encontraste una barrera de accesibilidad? Contanos.</p>
+      </div>
 
-            <a href="#contacto">Empezar ahora</a>
-        </section>
+      <form id="form-contacto" novalidate>
+        <div>
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" autocomplete="name" required aria-describedby="nombre-error">
+          <p id="nombre-error" role="alert"></p>
+        </div>
+        <div>
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="email-error">
+          <p id="email-error" role="alert"></p>
+        </div>
+        <div>
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" required aria-describedby="mensaje-error"></textarea>
+          <p id="mensaje-error" role="alert"></p>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+        <p class="form-status" role="status" id="form-status"></p>
+      </form>
+    </div>
+  </section>
 
+</main>
 
-        <section id="caracteristicas">
+<footer>
+  <div class="wrap">
+    <p>© 2026 Budgeta. Todos los derechos reservados.</p>
+    <p>Proyecto de accesibilidad · <a href="https://github.com/Esteban4k-ai/Implementaci-n-e-Integraci-n-de-Accesibilidad-Web" target="_blank" rel="noopener">Ver código en GitHub</a></p>
+  </div>
+</footer>
 
-            <h2>Todo lo que necesitás para organizar tus finanzas</h2>
-
-            <article>
-                <h3>Seguimiento de gastos</h3>
-
-                <p>
-                    Registrá y organizá tus gastos para saber
-                    en qué utilizás tu dinero.
-                </p>
-            </article>
-
-            <article>
-                <h3>Presupuestos</h3>
-
-                <p>
-                    Establecé límites para tus gastos y
-                    mantené tus objetivos bajo control.
-                </p>
-            </article>
-
-            <article>
-                <h3>Estadísticas</h3>
-
-                <p>
-                    Comprendé tus hábitos financieros mediante
-                    información clara y sencilla.
-                </p>
-            </article>
-
-        </section>
-
-
-        <section id="seguridad">
-
-            <h2>Tu información, protegida</h2>
-
-            <p>
-                Budgeta está pensado para que puedas organizar
-                tu información financiera de manera clara y segura.
-            </p>
-
-        </section>
-
-
-        <section id="contacto">
-
-            <h2>Contactate con nosotros</h2>
-
-            <form>
-
-                <div>
-                    <label for="nombre">Nombre</label>
-
-                    <input
-                        type="text"
-                        id="nombre"
-                        name="nombre"
-                        required>
-                </div>
-
-
-                <div>
-                    <label for="email">Correo electrónico</label>
-
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        required
-                        aria-describedby="email-error">
-
-                    <p id="email-error" role="alert"></p>
-                </div>
-
-
-                <div>
-                    <label for="mensaje">Mensaje</label>
-
-                    <textarea
-                        id="mensaje"
-                        name="mensaje"
-                        required></textarea>
-                </div>
-
-
-                <button type="submit">
-                    Enviar mensaje
-                </button>
-
-            </form>
-
-        </section>
-
-    </main>
-
-
-    <footer>
-        <p>&copy; 2026 Budgeta. Todos los derechos reservados.</p>
-    </footer>
-
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 
 </body>
-
 </html>
